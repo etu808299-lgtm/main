@@ -1,0 +1,444 @@
+﻿/* Bootstrap override protection */
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  background-color: #00B7B5;
+  background: #00B7B5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, * {
+  box-sizing: border-box;
+}
+
+/* Reset conflitos com Bootstrap */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+p, a, span, li {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Garantir que o Bootstrap não conflite */
+.container {
+  max-width: 1100px;
+}
+
+button, input, select, textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ---------------- HEADER ---------------- */
+
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 40px;
+  border-bottom: 3px solid #b40000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.header-item img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.header-item:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ---------------- GRID DAS SITUAÇÕES ---------------- */
+
+.layout {
+  padding: 30px 20px;
+}
+
+.situacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  grid-template-rows: repeat(2, auto);   /* 2 linhas */
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+/* ---------------- CARDS ---------------- */
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: 0.25s;
+  border: none !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border: none !important;
+}
+
+.card h4 {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+
+/* Tablets e telas médias ─ 2 colunas */
+@media (max-width: 1024px) {
+  .situacoes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  header.header {
+    padding: 15px 20px;
+  }
+}
+
+/* Celulares ─ 1 coluna */
+@media (max-width: 600px) {
+  header.header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .situacoes {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .header-item img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* global zoomable helper */
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.2s;
+}
+.zoomable:hover {
+  transform: scale(1.02);
+}
+
+/* Modal de ampliação global */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  cursor: zoom-out;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 0px;
+  animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+}
+
+/* ============ PAGE HEADER PROTECTION ============ */
+.page-header {
+  display: block !important;
+  margin-bottom: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+}
+
+.page-header h2 {
+  display: block !important;
+  color: #c41e1e !important;
+  margin: 0 0 12px 0 !important;
+  padding: 0 !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  font-family: "Poppins", sans-serif !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Proteção genérica para todos os h2 em páginas específicas */
+body.incendio-page h2,
+body.parada-page h2,
+body.animais-page h2,
+body.engasgos-page h2,
+body.afogamento-page h2,
+body.samu-page h2,
+body.bombeiro-page h2,
+body.policia-page h2 {
+  display: block !important;
+  color: #c41e1e !important;
+  font-weight: 700 !important;
+  font-family: "Poppins", sans-serif !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  margin-bottom: 12px !important;
+}
+
+/* headings inside instruction cards use darker shade */
+.instructions-card h2 {
+  color: #8b1515 !important;
+  display: block !important;
+  font-weight: 700 !important;
+  font-family: "Poppins", sans-serif !important;
+  margin-top: 16px !important;
+  margin-bottom: 12px !important;
+  padding: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.instructions-card h2:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* Proteção contra estilos Bootstrap */
+.instructions-card ul, .instructions-card ol {
+  list-style: inherit !important;
+  margin-left: 18px !important;
+}
+
+/* ---------------- FOOTER ---------------- */
+.site-footer {
+  margin-top: auto;     /* empurra o footer pro fim da tela */
+  background: #018790; /* novo tom conforme pedido */
+  padding: 24px 20px 12px;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:0 auto 12px;
+  display:flex;
+  gap:20px;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+.footer-column{flex:1;min-width:180px}
+.footer-column h4{margin-bottom:8px;color:#052a36}
+.footer-column p{font-size:0.95rem;color:#10343b;line-height:1.4}
+.footer-links ul{list-style:none;padding:0}
+.footer-links a{color:#063640;text-decoration:none}
+.footer-links li{margin-bottom:6px}
+.footer-contact strong{display:inline-block;width:90px}
+.footer-bottom{max-width:1100px;margin:0 auto;text-align:center;padding-top:6px;border-top:1px solid rgba(0,0,0,0.04);color:#064350}
+
+@media (max-width:900px){
+  .footer-inner{flex-direction:column;gap:14px;align-items:center;text-align:center}
+  .footer-contact strong{width:auto}
+}
+
+/* Sobreposição de zoom ao passar o mouse */
+.zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+}
+
+.zoom-text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.zoom-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.zoom-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-icon:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.zoom-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #333;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Escurece a imagem em 30% e ativa a sobreposição ao passar mouse */
+.zoomable-image:hover {
+  filter: brightness(0.7);
+}
+
+.zoomable-image:hover .zoom-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* -------- BOTÕES CUSTOMIZADOS -------- */
+/* Evitar conflito com Bootstrap */
+.btn {
+  display: inline-block !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  transition: all 0.25s !important;
+  border: none !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.btn-call {
+  background: linear-gradient(90deg,#ff5555,#c41e1e) !important;
+  box-shadow: 0 10px 20px rgba(196,30,30,0.12) !important;
+}
+
+.btn-back {
+  background: #6c6c6c !important;
+}
+
+.btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
+}
+
+/* Botões primários e secundários */
+.btn-primary {
+  background: linear-gradient(90deg,#ff5555,#c41e1e) !important;
+  border: none !important;
+}
+
+/* ============ BOOTSTRAP COMPATIBILITY FINAIS ============ */
+/* Garante que estilos específicos não sejam sobrescritos pelo Bootstrap */
+
+/* Proteção de imagens */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Proteção de listas */
+ul, ol {
+  list-style: inherit !important;
+}
+
+/* Proteção de containers */
+.container, .container-fluid {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Link consistency */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Evitar que Bootstrap altere a cor de backgrounds */
+body.afogamento-page, body.animais-page, body.bombeiro-page, body.engasgos-page, body.incendio-page, body.parada-page, body.policia-page, body.samu-page {
+  background-color: #00B7B5 !important;
+}

@@ -1,0 +1,24 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Windows-style line endings for all files
+[*]
+end_of_line = crlf
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# 2 spaces for HTML, CSS, and JavaScript
+[*.{html,htm,css,js,json}]
+indent_size = 2
+
+# 4 spaces for Python (if used)
+[*.py]
+indent_size = 4
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false

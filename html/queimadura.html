@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <title>Queimadura — Click Salve</title>
+  <meta name="description" content="Aprenda o que fazer em caso de queimadura. Guia rápido de primeiros socorros.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/queimadura.css">
+</head>
+
+<body class="queimadura-page">
+
+  <header class="header">
+    <div class="header-item">
+      <img src="../assets-layout/saude.jpg" alt="Logo Click Salve">
+      <h1>CLIQUE SALVE</h1>
+    </div>
+
+    <div class="header-item">
+      <img src="../assets-layout/emergencia.png" alt="Ícone de emergência">
+      <h1>LIGUE AGORA</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container py-4">
+
+      <div class="page-header text-center mb-4">
+        <h2>Queimaduras — O que fazer</h2>
+      </div>
+
+      <div class="image-block text-center mb-4">
+        <img src="../img_queimadura/queimaduraguia.png" 
+             alt="Guia ilustrado de primeiros socorros para queimaduras"
+             class="img-fluid hero-img zoomable rounded shadow">
+      </div>
+
+      <section class="instructions-card" role="region" aria-label="Instruções para queimadura">
+
+        <h2>Passos imediatos</h2>
+        <ol>
+          <li>Afaste a vítima da fonte de calor.</li>
+          <li>Resfrie a área queimada com água corrente por 10 a 20 minutos.</li>
+          <li>Retire anéis, relógios ou objetos apertados da área afetada.</li>
+          <li>Cubra a queimadura com pano limpo ou gaze estéril.</li>
+          <li>Não use pasta de dente, manteiga, óleo ou pomadas caseiras.</li>
+          <li>Não estoure bolhas.</li>
+        </ol>
+
+        <h2 class="mt-4">Procure atendimento médico se:</h2>
+        <ul>
+          <li>A queimadura for extensa ou profunda.</li>
+          <li>Estiver no rosto, mãos, pés ou órgãos genitais.</li>
+          <li>For causada por choque elétrico ou produto químico.</li>
+          <li>A vítima for criança ou idoso.</li>
+        </ul>
+
+        <div class="actions mt-4">
+          <a class="btn btn-call" href="tel:193">Ligar para 193</a>
+          <a class="btn btn-back" href="../index.html">Voltar</a>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer text-center py-3 mt-4">
+    <small>© Click Salve</small>
+  </footer>
+
+  <script src="../script.js"></script>
+
+  <!-- Modal para ampliar imagens -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgExpanded" alt="Imagem ampliada">
+    <div id="caption"></div>
+  </div>
+
+</body>
+</html>
