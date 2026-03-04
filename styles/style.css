@@ -177,6 +177,19 @@ header.header {
   cursor: zoom-out;
 }
 
+/* Forçar modo paisagem no modal */
+@media screen and (orientation: portrait) {
+  .modal {
+    width: 100vh;
+    height: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center;
+    padding-top: 0;
+  }
+}
+
 .modal-content {
   margin: auto;
   display: block;
@@ -208,6 +221,20 @@ header.header {
   display: block;
   width: 80%;
   text-align: center;
+}
+
+/* Ajustes para modo paisagem forçado */
+@media screen and (orientation: portrait) {
+  .close {
+    top: 35px;
+    right: 15px;
+    transform: rotate(-90deg);
+  }
+  
+  #caption {
+    transform: rotate(-90deg);
+    width: 60%;
+  }
 }
 
 /* ============ PAGE HEADER PROTECTION ============ */
