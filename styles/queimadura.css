@@ -39,8 +39,8 @@ body.queimadura-page { font-family:'Poppins', system-ui, -apple-system, 'Segoe U
 .modal {
   display: none; /* Escondido por padrão */
   position: fixed;
-  z-index: 1000;
-  padding-top: 50px;
+  z-index: 2;
+  padding-top: 10px;
   left: 0;
   top: 0;
   width: 100%;
@@ -52,7 +52,7 @@ body.queimadura-page { font-family:'Poppins', system-ui, -apple-system, 'Segoe U
 .modal-content {
   margin: auto;
   display: block;
-  width: 41%;
+  width: 90vh;
   max-width: 800px;
   border-radius: 10px;
   animation: zoom 0.3s;
@@ -65,10 +65,14 @@ body.queimadura-page { font-family:'Poppins', system-ui, -apple-system, 'Segoe U
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  z-index: 3;
+  background-color: #222;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   color: #fff;
-  font-size: 40px;
+  text-align: center;
+  line-height: 40px;
   font-weight: bold;
   cursor: pointer;
 }
